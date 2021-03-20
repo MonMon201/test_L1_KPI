@@ -45,7 +45,7 @@ func main() {
 		cmd.Stdin = os.Stdin
 		cmd.Stderr = os.Stderr
 		if err := cmd.Run(); err != nil {
-			config.Info.Fatal("Error invoking ninja build. See logs above.")
+			config.Info.Fatal(err)
 		}
 	}
 }
